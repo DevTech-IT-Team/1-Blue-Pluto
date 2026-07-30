@@ -39,11 +39,14 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             className="flex-shrink-0 flex items-center group cursor-pointer"
           >
-            <div className="relative">
-              <span className="text-2xl font-black tracking-tighter text-white">
+            <div className="relative flex flex-col">
+              <span className="text-3xl lg:text-4xl font-black tracking-tighter text-white leading-none">
                 1 <span className="text-[#D4AF37] group-hover:text-white transition-colors duration-300">BLUE</span> PLUTO
               </span>
-              <div className="h-[2px] w-0 group-hover:w-full bg-[#D4AF37] transition-all duration-300" />
+              <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-[#D4AF37] group-hover:text-white transition-colors duration-300 mt-1">
+                Powerful Evolution
+              </span>
+              <div className="h-[2px] w-0 group-hover:w-full bg-[#D4AF37] transition-all duration-300 mt-0.5" />
             </div>
           </motion.div>
 

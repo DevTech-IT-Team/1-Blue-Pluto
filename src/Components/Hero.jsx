@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ShieldCheck, Paintbrush, LifeBuoy, Settings, MousePointer2 } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Paintbrush, LifeBuoy, Settings, MousePointer2, Quote } from 'lucide-react';
 
 const Hero = () => {
   const services = [
@@ -24,29 +24,40 @@ const Hero = () => {
         <div className="grid lg:grid-cols-12 gap-16 items-center">
           
           {/* Left Column: The Hook */}
-          <div className="lg:col-span-7 space-y-10">
+          <div className="lg:col-span-7 space-y-8">
            
             
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-6xl md:text-7xl font-black text-white leading-[0.9] tracking-tighter"
+              className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[1.05] tracking-tighter uppercase"
             >
-              POWERFUL <br />
+              JOIN US ON A <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#D4AF37] via-[#f3d06b] to-[#8d7016]">
-                EVOLUTION
+                LIFE CHANGING JOURNEY!
               </span>
             </motion.h1>
             
-            <motion.p 
+            <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-gray-400 text-lg md:text-xl max-w-xl leading-relaxed font-light"
+              className="space-y-6"
             >
-              1 Blue Pluto provides elite <strong className="text-white font-semibold">Business Trust consulting</strong> and bespoke marketing strategies designed to scale your vision through expert guidance and fiduciary integrity.
-            </motion.p>
+              <p className="text-gray-300 text-lg md:text-xl max-w-xl leading-relaxed font-light">
+                <span className="text-[#D4AF37] font-bold tracking-wider block mb-1">OUR MISSION...</span>
+                To introduce you to a way of life you may not know exists!
+              </p>
+
+              {/* Greek Meaning Text Box */}
+              <div className="relative p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 group">
+                <Quote className="absolute -top-3 -left-3 text-[#003366] group-hover:text-[#D4AF37] transition-colors duration-500" size={32} fill="currentColor" />
+                <p className="text-gray-200 text-base sm:text-lg leading-relaxed font-light italic">
+                  "The name is derived from the Greek <span className="text-[#D4AF37] font-semibold">Ploutōn</span>, meaning 'the wealthy one.' In our world, wealth isn't just capital—it is the trust, clarity, and evolution of your business."
+                </p>
+              </div>
+            </motion.div>
 
             <motion.div 
               initial={{ opacity: 0, y: 20 }}

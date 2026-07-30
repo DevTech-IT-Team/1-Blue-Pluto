@@ -1,53 +1,53 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Shield, Megaphone, Briefcase, PencilRuler, 
-  GraduationCap, Layers, ArrowUpRight 
+  Shield, GraduationCap, Compass, Briefcase, 
+  Lock, CreditCard, ArrowUpRight 
 } from 'lucide-react';
 
 const Services = () => {
   const serviceList = [
     {
-      title: "Business Trust & Fiduciary",
-      category: "Consulting",
-      description: "Expert guidance on fiduciary responsibilities and trust management. We act as your grounded advisor to ensure stability.",
+      category: "CONSULTING",
+      title: "Business Trust",
+      description: "Live privately, prosper intentionally, create a lasting impact for generations to come.",
       icon: <Shield className="w-6 h-6" />,
-      features: ["Trust Consulting", "Fiduciary Oversight", "Strategic Guidance"]
+      features: ["Private Living", "Intentional Prosperity", "Generational Legacy"]
     },
     {
-      title: "Graphic Design & Marketing",
-      category: "Advertising",
-      description: "High-impact visual storytelling and strategic advertising campaigns that evolve your brand's presence.",
-      icon: <Megaphone className="w-6 h-6" />,
-      features: ["Brand Identity", "Ad Strategy", "Visual Content"]
-    },
-    {
-      title: "Back-Office Support",
-      category: "Operations",
-      description: "Optimizing the engine of your business. We streamline administrative tasks so you can focus on high-level growth.",
-      icon: <Briefcase className="w-6 h-6" />,
-      features: ["Process Optimization", "Admin Support", "Workflow Audit"]
-    },
-    {
-      title: "Professional Training",
-      category: "Education",
-      description: "Equipping your team with the skills they need to maintain the evolution we start together. Custom modules.",
+      category: "EDUCATION",
+      title: "Learn to Operate Private",
+      description: "Discover the alternate universe of private commerce. Learn how to draft and finalize trust documents with clarity and integrity.",
       icon: <GraduationCap className="w-6 h-6" />,
-      features: ["Team Workshops", "Skill Development", "Operational Training"]
+      features: ["Private Commerce", "Trust Documents", "Integrity & Clarity"]
     },
     {
-      title: "Creative Design",
-      category: "Marketing",
-      description: "Custom creative services from UI/UX concepts to print media, ensuring your brand looks as elite as your services.",
-      icon: <PencilRuler className="w-6 h-6" />,
-      features: ["Logo Design", "Print Media", "Digital Assets"]
+      category: "MENTORING",
+      title: "Private, Lawful, Powerful",
+      description: "Understand the difference between public and private status, and how you can leave a lasting impact, instead of an ongoing nightmare-public probate court.",
+      icon: <Compass className="w-6 h-6" />,
+      features: ["Public vs Private", "Lawful Autonomy", "Avoid Probate"]
     },
     {
-      title: "Custom Tailored Services",
-      category: "Bespoke",
-      description: "Every business is unique. We build specialized service packages that address your specific roadblocks.",
-      icon: <Layers className="w-6 h-6" />,
-      features: ["Niche Consulting", "Scalable Support", "Hybrid Models"]
+      category: "OPERATIONS",
+      title: "Back Office Support",
+      description: "Your mission, made easier with all the help you need. Streamline administrative tasks so you can focus on your destination.",
+      icon: <Briefcase className="w-6 h-6" />,
+      features: ["Administrative Ease", "Task Streamlining", "Destination Focus"]
+    },
+    {
+      category: "EXPERT GUIDANCE",
+      title: "Asset Protection",
+      description: "Learn about legal separation. Safeguard your name, real estate, real property and your legacy using strategies the privileged use to build, protect and pass on wealth.",
+      icon: <Lock className="w-6 h-6" />,
+      features: ["Legal Separation", "Asset Safeguarding", "Wealth Preservation"]
+    },
+    {
+      category: "MISSION CONTROL",
+      title: "Establish Private Credit",
+      description: "Learn how your business can have it’s own private legal identity, establish private credit and operate in commerce without relying on your SSN.",
+      icon: <CreditCard className="w-6 h-6" />,
+      features: ["Legal Identity", "Private Credit", "No SSN Reliance"]
     }
   ];
 
@@ -111,13 +111,13 @@ const Services = () => {
 
               {/* Content */}
               <div className="space-y-4 mb-8">
-                <span className="text-[10px] font-black tracking-widest text-gray-600 uppercase">
+                <span className="text-[10px] font-black tracking-widest text-[#D4AF37] uppercase">
                   {service.category}
                 </span>
                 <h4 className="text-2xl font-bold text-white group-hover:text-[#D4AF37] transition-colors leading-tight">
                   {service.title}
                 </h4>
-                <p className="text-gray-500 text-sm leading-relaxed line-clamp-3 group-hover:text-gray-400 transition-colors">
+                <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
                   {service.description}
                 </p>
               </div>
@@ -125,7 +125,7 @@ const Services = () => {
               {/* Features - Minimalist style */}
               <div className="pt-6 border-t border-white/5 flex flex-wrap gap-2">
                 {service.features.map((feature, fIndex) => (
-                  <span key={fIndex} className="text-[10px] font-medium text-gray-500 bg-white/5 px-3 py-1 rounded-full group-hover:border-[#D4AF37]/20 border border-transparent transition-colors">
+                  <span key={fIndex} className="text-[10px] font-medium text-gray-400 bg-white/5 px-3 py-1 rounded-full group-hover:border-[#D4AF37]/20 border border-transparent transition-colors">
                     {feature}
                   </span>
                 ))}
@@ -137,6 +137,13 @@ const Services = () => {
               </span>
             </motion.div>
           ))}
+        </div>
+
+        {/* Legal Disclaimer */}
+        <div className="mt-16 text-center text-xs text-gray-500 max-w-3xl mx-auto border-t border-white/10 pt-6">
+          <p>
+            <strong className="text-gray-400">* Disclaimer:</strong> "All information provided is for educational purposes only and does not constitute legal, financial, or therapeutic advice."
+          </p>
         </div>
       </div>
     </section>

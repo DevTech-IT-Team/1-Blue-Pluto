@@ -54,10 +54,9 @@ const About = () => {
               </h3>
             </div>
 
-            <div className="relative p-10 rounded-2xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 group">
-              <Quote className="absolute -top-4 -left-4 text-[#003366] group-hover:text-[#D4AF37] transition-colors duration-500" size={40} fill="currentColor" />
-              <p className="text-gray-200 text-xl leading-relaxed font-light italic">
-                "The name is derived from the Greek <span className="text-[#D4AF37] font-semibold">Ploutōn</span>, meaning 'the wealthy one.' In our world, wealth isn't just capital—it is the trust, clarity, and evolution of your business."
+            <div className="relative p-8 rounded-2xl bg-[#003366]/20 border border-[#D4AF37]/30 group shadow-lg">
+              <p className="text-gray-200 text-base md:text-lg leading-relaxed font-light">
+                At 1 Blue Pluto our members are our mission. Our goal is for members to thrive financially while maintaining privacy and autonomy. We offer private consulting, education and mentoring services, and back-office support services tailored to your needs. Our services are available by invitation or referral only.
               </p>
             </div>
 
@@ -120,6 +119,13 @@ const About = () => {
             Contact
           </a>
         </motion.div>
+
+        {/* Legal Disclaimer */}
+        <div className="mt-16 text-center text-xs text-gray-500 max-w-3xl mx-auto border-t border-white/10 pt-6">
+          <p>
+            <strong className="text-gray-400">Disclaimer:</strong> "All information provided is for educational purposes only and does not constitute legal, financial, or therapeutic advice."
+          </p>
+        </div>
       </div>
     </section>
   );

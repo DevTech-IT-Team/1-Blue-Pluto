@@ -11,9 +11,9 @@ const Contact = () => {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-12 gap-20 items-start">
-          
+
           {/* Left Side: Editorial Info Stack */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -31,27 +31,27 @@ const Contact = () => {
                 </span>
               </h3>
               <p className="text-gray-400 text-lg font-light leading-relaxed max-w-md">
-                Ready to elevate your business trust or refine your brand's creative edge? Reach out for a confidential consultation.
-              </p>
+                Ready to embark on your mission? “A journey of one thousand miles begins with the first
+                step.” Take the first step. Reach out for a confidential consultation.              </p>
             </div>
 
             <div className="space-y-8 pt-8 border-t border-white/5">
               {[
-                { 
-                  icon: <Mail size={20} />, 
-                  label: "Email Laura Marie", 
+                {
+                  icon: <Mail size={20} />,
+                  label: "Email Laura Marie",
                   value: "lauramarie@1bluepluto.com",
                   href: "mailto:lauramarie@1bluepluto.com"
                 },
-                { 
-                  icon: <MessageSquare size={20} />, 
-                  label: "Specialization", 
-                  value: "Business Trust & Marketing Strategy" 
+                {
+                  icon: <MessageSquare size={20} />,
+                  label: "Specialization",
+                  value: "Business Trust & Marketing Strategy"
                 },
-                { 
-                  icon: <Clock size={20} />, 
-                  label: "Response Window", 
-                  value: "24-48 Business Hours" 
+                {
+                  icon: <Clock size={20} />,
+                  label: "Response Window",
+                  value: "24-48 Business Hours"
                 }
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center group cursor-pointer">
@@ -72,7 +72,7 @@ const Contact = () => {
           </motion.div>
 
           {/* Right Side: Glassmorphic Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -82,21 +82,21 @@ const Contact = () => {
               <div className="bg-[#111111] p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden shadow-2xl">
                 {/* Texture Overlay */}
                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
-                
+
                 <form className="relative z-10 space-y-8">
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="space-y-2">
                       <label className="text-[10px] font-black text-gray-500 uppercase tracking-widest ml-1">Full Name</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         className="w-full bg-[#0a0a0a] border border-white/5 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 transition-all placeholder:text-gray-700"
                         placeholder="John Doe"
                       />
                     </div>
                     <div className="space-y-2">
                       <label className="text-[10px] font-black text-gray-500 uppercase tracking-widest ml-1">Corporate Email</label>
-                      <input 
-                        type="email" 
+                      <input
+                        type="email"
                         className="w-full bg-[#0a0a0a] border border-white/5 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 transition-all placeholder:text-gray-700"
                         placeholder="john@company.com"
                       />
@@ -120,14 +120,14 @@ const Contact = () => {
 
                   <div className="space-y-2">
                     <label className="text-[10px] font-black text-gray-500 uppercase tracking-widest ml-1">Project Brief</label>
-                    <textarea 
-                      rows="4" 
+                    <textarea
+                      rows="4"
                       className="w-full bg-[#0a0a0a] border border-white/5 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 transition-all placeholder:text-gray-700 resize-none"
                       placeholder="Tell us about your evolution goals..."
                     ></textarea>
                   </div>
 
-                  <motion.button 
+                  <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className="w-full bg-[#D4AF37] hover:bg-white text-black font-black uppercase tracking-[0.3em] py-5 rounded-xl flex items-center justify-center transition-all duration-300 shadow-[0_20px_40px_-10px_rgba(212,175,55,0.2)] group"
@@ -147,7 +147,7 @@ const Contact = () => {
             <ShieldCheck className="text-[#003366]" size={24} />
             <span className="text-gray-500 text-xs tracking-widest font-bold uppercase">1 BLUE PLUTO • Est. 2026</span>
           </div>
-          
+
           <p className="text-gray-600 text-[10px] uppercase tracking-widest">
             © All Rights Reserved. Ploutōn Evolution LLC.
           </p>

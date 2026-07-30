@@ -14,19 +14,19 @@ const WhyChooseUs = () => {
       id: "02",
       icon: <Gem className="w-5 h-5" />,
       title: "The 'Wealthy One' Approach",
-      description: "We focus on building true business abundance: combining operational health with a powerful market reputation."
+      description: "In our world, wealth isn't just capital—it is the trust, clarity, and evolution of your business."
     },
     {
       id: "03",
       icon: <Zap className="w-5 h-5" />,
       title: "Agile Evolution",
-      description: "From back-office support to high-end design, we adapt our services as your business moves through growth stages."
+      description: "Set up your business trust in a week, not months."
     },
     {
       id: "04",
       icon: <Users className="w-5 h-5" />,
-      title: "Bespoke Partnership",
-      description: "You aren't a number. Every strategy is custom-built by Laura Marie and our team to fit your specific company DNA."
+      title: "Private Mentorship",
+      description: "No public business, legal advice, financial advice or therapy is offered. All services are provided as private educational interactions."
     }
   ];
 
@@ -49,13 +49,20 @@ const WhyChooseUs = () => {
               <h2 className="text-[#D4AF37] font-black tracking-[0.4em] uppercase text-xs">
                 The Pluto Advantage
               </h2>
-              <h3 className="text-5xl md:text-6xl font-black text-white leading-[1.1] tracking-tighter">
+              <h3 className="text-4xl md:text-5xl font-black text-white leading-[1.2] tracking-tighter">
                 Why Leaders Trust <br /> 
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-white">1 Blue Pluto</span>
+                <span className="font-black tracking-tighter text-white">
+                  1 <span className="text-[#D4AF37]">BLUE</span> PLUTO
+                </span>
               </h3>
-              <p className="text-gray-400 text-lg leading-relaxed font-light">
-                We bridge the gap between back-office stability and front-end brilliance. Our model ensures that as you grow, your foundation remains unshakeable.
-              </p>
+              <div className="text-gray-400 text-base md:text-lg leading-relaxed font-light space-y-4">
+                <p>
+                  We don’t just advise, we guide members through the complexities of a successful mission with the foresight of a partner and the precision of a specialist.
+                </p>
+                <p>
+                  Our innovative approach empowers entrepreneurs, family businesses and individuals by helping them establish a business trust, build private credit, safeguard assets and protect their legacy. We understand business trust law, commercial strategies, and the principles of living privately. Our destination-your success!
+                </p>
+              </div>
             </div>
             
             {/* Stat Card */}
