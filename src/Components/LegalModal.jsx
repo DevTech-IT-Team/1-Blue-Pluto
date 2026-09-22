@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ShieldCheck, FileText, Lock } from 'lucide-react';
+import BrandLogo from './BrandLogo';
 
 const LegalModal = ({ isOpen, onClose, initialTab = 'privacy' }) => {
   const [activeTab, setActiveTab] = React.useState(initialTab);
@@ -33,12 +34,10 @@ const LegalModal = ({ isOpen, onClose, initialTab = 'privacy' }) => {
           >
             {/* Modal Header */}
             <div className="flex items-center justify-between px-6 py-5 border-b border-white/10 bg-[#0a0a0a]">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-[#003366] text-[#D4AF37] flex items-center justify-center">
-                  {activeTab === 'privacy' ? <Lock size={18} /> : <FileText size={18} />}
-                </div>
-                <span className="text-[#D4AF37] font-black text-sm uppercase tracking-[0.2em]">
-                  1 BLUE PLUTO • LEGAL & PRIVACY
+              <div className="flex items-center gap-4 min-w-0">
+                <BrandLogo showTagline={false} asLink={false} imgClassName="h-12 w-auto sm:h-14" />
+                <span className="text-[#D4AF37] font-black text-xs sm:text-sm uppercase tracking-[0.2em]">
+                  Legal & Privacy
                 </span>
               </div>
               <button
@@ -165,9 +164,9 @@ const LegalModal = ({ isOpen, onClose, initialTab = 'privacy' }) => {
 
             {/* Modal Footer */}
             <div className="px-6 py-4 border-t border-white/10 bg-[#0a0a0a] flex items-center justify-between">
-              <div className="flex items-center gap-2 text-[#D4AF37] text-xs font-bold">
+              <div className="flex items-center gap-2 text-[#D4AF37]">
                 <ShieldCheck size={16} />
-                <span>1 BLUE PLUTO</span>
+                <BrandLogo showTagline={false} asLink={false} imgClassName="h-9 w-auto" />
               </div>
               <button
                 onClick={onClose}

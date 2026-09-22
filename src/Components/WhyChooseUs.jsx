@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section id="why-choose-us" className="py-32 bg-[#0a0a0a] relative overflow-hidden pt-14">
+    <section id="why-choose-us" className="py-14 lg:py-16 bg-[#0a0a0a] relative overflow-hidden">
       {/* Background Decorative Element */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-[#003366]/5 skew-x-12 translate-x-20 pointer-events-none" />
 
@@ -49,10 +49,14 @@ const WhyChooseUs = () => {
               <h2 className="text-[#D4AF37] font-black tracking-[0.4em] uppercase text-xs">
                 The Pluto Advantage
               </h2>
-              <h3 className="text-4xl md:text-5xl font-black text-white leading-[1.2] tracking-tighter">
-                Why Leaders Trust <br /> 
-                <span className="font-black tracking-tighter text-white">
-                  1 <span className="text-[#D4AF37]">BLUE</span> PLUTO
+              <h3 className="text-4xl md:text-5xl font-black text-white leading-[1.15] tracking-tighter">
+                Why Leaders Trust
+                <span className="mt-2 flex flex-wrap items-end gap-x-3">
+                  <span>1</span>
+                  <span className="font-logo-script inline-block translate-y-[0.08em] text-[1.65em] font-normal leading-none text-[#0070F8]">
+                    Blue
+                  </span>
+                  <span>PLUTO</span>
                 </span>
               </h3>
               <div className="text-gray-400 text-base md:text-lg leading-relaxed font-light space-y-4">

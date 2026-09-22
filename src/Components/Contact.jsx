@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MessageSquare, Clock, Send, ShieldCheck, Globe } from 'lucide-react';
+import { Mail, MapPin, MessageSquare, Clock, Send, Globe } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-32 bg-[#0a0a0a] relative overflow-hidden pt-14">
+    <section id="contact" className="py-14 lg:py-16 bg-[#0a0a0a] relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-[#003366] opacity-10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[-5%] left-[-5%] w-[400px] h-[400px] bg-[#D4AF37] opacity-5 blur-[100px] rounded-full pointer-events-none" />
@@ -38,6 +38,12 @@ const Contact = () => {
             <div className="space-y-8 pt-8 border-t border-white/5">
               {[
                 {
+                  icon: <MapPin size={20} />,
+                  label: "1 Blue Pluto",
+                  value: "3750 Gunn Hwy, Suite 306 C1064",
+                  secondary: "Tampa, FL 33618"
+                },
+                {
                   icon: <Mail size={20} />,
                   label: "Email Laura Marie",
                   value: "lauramarie@1bluepluto.com",
@@ -64,6 +70,9 @@ const Contact = () => {
                       <a href={item.href} className="text-white font-bold group-hover:text-[#D4AF37] transition-colors">{item.value}</a>
                     ) : (
                       <p className="text-white font-bold">{item.value}</p>
+                    )}
+                    {item.secondary && (
+                      <p className="text-white font-bold">{item.secondary}</p>
                     )}
                   </div>
                 </div>
@@ -140,26 +149,6 @@ const Contact = () => {
             </div>
           </motion.div>
         </div>
-
-        {/* Professional Sign-off Footer */}
-        <footer className="mt-32 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex items-center gap-4">
-            <ShieldCheck className="text-[#003366]" size={24} />
-            <span className="text-gray-500 text-xs tracking-widest font-bold uppercase">1 BLUE PLUTO • Est. 2026</span>
-          </div>
-
-          <p className="text-gray-600 text-[10px] uppercase tracking-widest">
-            © All Rights Reserved. Ploutōn Evolution LLC.
-          </p>
-
-          <div className="flex space-x-8">
-            {['Privacy', 'Terms', 'LinkedIn'].map((item) => (
-              <a key={item} href="#" className="text-gray-600 hover:text-[#D4AF37] text-[10px] uppercase tracking-[0.2em] font-bold transition-colors">
-                {item}
-              </a>
-            ))}
-          </div>
-        </footer>
       </div>
     </section>
   );

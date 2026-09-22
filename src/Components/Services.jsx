@@ -29,13 +29,6 @@ const Services = () => {
       features: ["Public vs Private", "Lawful Autonomy", "Avoid Probate"]
     },
     {
-      category: "OPERATIONS",
-      title: "Back Office Support",
-      description: "Your mission, made easier with all the help you need. Streamline administrative tasks so you can focus on your destination.",
-      icon: <Briefcase className="w-6 h-6" />,
-      features: ["Administrative Ease", "Task Streamlining", "Destination Focus"]
-    },
-    {
       category: "EXPERT GUIDANCE",
       title: "Asset Protection",
       description: "Learn about legal separation. Safeguard your name, real estate, real property and your legacy using strategies the privileged use to build, protect and pass on wealth.",
@@ -48,11 +41,18 @@ const Services = () => {
       description: "Learn how your business can have it’s own private legal identity, establish private credit and operate in commerce without relying on your SSN.",
       icon: <CreditCard className="w-6 h-6" />,
       features: ["Legal Identity", "Private Credit", "No SSN Reliance"]
+    },
+    {
+      category: "OPERATIONS",
+      title: "Back Office Support",
+      description: "Your mission, made easier with all the help you need. Streamline administrative tasks so you can focus on your destination.",
+      icon: <Briefcase className="w-6 h-6" />,
+      features: ["Administrative Ease", "Task Streamlining", "Destination Focus"]
     }
   ];
 
   return (
-    <section id="services" className="py-32 bg-[#0a0a0a] relative overflow-hidden pt-14">
+    <section id="services" className="py-14 lg:py-16 bg-[#0a0a0a] relative overflow-hidden">
       {/* Dynamic Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl bg-[#003366]/10 blur-[120px] rounded-full pointer-events-none" />
 

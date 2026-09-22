@@ -1,17 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ShieldCheck, Paintbrush, LifeBuoy, Settings, MousePointer2, Quote } from 'lucide-react';
+import { ArrowRight, ShieldCheck, EyeOff, Lock, Rocket, MousePointer2, Quote } from 'lucide-react';
 
 const Hero = () => {
   const services = [
-    { icon: <ShieldCheck size={24} />, title: "Business Trust", desc: "Fiduciary guidance & consulting" },
-    { icon: <Paintbrush size={24} />, title: "Creative Growth", desc: "Graphic design & marketing" },
-    { icon: <LifeBuoy size={24} />, title: "Back-Office", desc: "Support & professional training" },
-    { icon: <Settings size={24} />, title: "Custom Solutions", desc: "Tailored to your specific needs" },
+    { icon: <ShieldCheck size={24} />, title: "Business Trust", desc: "Who do you trust?" },
+    { icon: <EyeOff size={24} />, title: "Privacy", desc: "What will a search of your name reveal?" },
+    { icon: <Lock size={24} />, title: "Asset Protection", desc: "Can someone easily take away your assets?" },
+    { icon: <Rocket size={24} />, title: "Evolution", desc: "Are you free to control your destination?" },
   ];
 
   return (
-    <section id="hero" className="relative min-h-[90vh] lg:min-h-screen bg-[#0a0a0a] flex items-center overflow-hidden pt-14">
+    <section id="hero" className="relative min-h-[90vh] lg:min-h-screen bg-[#0a0a0a] flex items-center overflow-hidden pt-36 pb-16 lg:pt-44">
       
       {/* Background Elements - Professional Depth */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -20,13 +20,11 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
       </div>
       
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 py-12">
-        <div className="grid lg:grid-cols-12 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           {/* Left Column: The Hook */}
           <div className="lg:col-span-7 space-y-8">
-           
-            
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -90,7 +88,7 @@ const Hero = () => {
             {services.map((item, index) => (
               <div 
                 key={index} 
-                className={`p-8 rounded-3xl border border-white/5 transition-all duration-500 group relative overflow-hidden
+                className={`p-6 sm:p-8 rounded-3xl border border-white/5 transition-all duration-500 group relative overflow-hidden
                   ${index === 1 || index === 2 ? 'bg-[#003366]/20' : 'bg-white/5'}
                   hover:bg-[#D4AF37]/10 hover:border-[#D4AF37]/40 hover:-translate-y-2
                 `}
@@ -102,7 +100,7 @@ const Hero = () => {
                   {item.icon}
                 </div>
                 <h3 className="text-white font-bold text-lg mb-2 tracking-tight">{item.title}</h3>
-                <p className="text-gray-500 text-xs leading-relaxed group-hover:text-gray-300 transition-colors">
+                <p className="text-gray-400 text-sm leading-relaxed group-hover:text-white transition-colors">
                   {item.desc}
                 </p>
               </div>

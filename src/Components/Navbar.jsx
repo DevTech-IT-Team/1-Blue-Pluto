@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import BrandLogo from './BrandLogo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,28 +27,20 @@ const Navbar = () => {
     <nav 
       className={`fixed w-full top-0 z-50 transition-all duration-500 ${
         scrolled 
-          ? 'bg-[#0a0a0a]/80 backdrop-blur-md py-3 border-b border-[#D4AF37]/30' 
-          : 'bg-transparent py-5'
+          ? 'bg-[#0a0a0a]/85 backdrop-blur-md py-2.5 border-b border-[#D4AF37]/30 shadow-[0_10px_30px_-20px_rgba(0,0,0,0.9)]' 
+          : 'bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center">
           
           {/* Logo Area */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex-shrink-0 flex items-center group cursor-pointer"
+            className="flex-shrink-0"
           >
-            <div className="relative flex flex-col">
-              <span className="text-3xl lg:text-4xl font-black tracking-tighter text-white leading-none">
-                1 <span className="text-[#D4AF37] group-hover:text-white transition-colors duration-300">BLUE</span> PLUTO
-              </span>
-              <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-[#D4AF37] group-hover:text-white transition-colors duration-300 mt-1">
-                Powerful Evolution
-              </span>
-              <div className="h-[2px] w-0 group-hover:w-full bg-[#D4AF37] transition-all duration-300 mt-0.5" />
-            </div>
+            <BrandLogo imgClassName="h-12 w-auto sm:h-14 lg:h-16" />
           </motion.div>
 
           {/* Desktop Menu */}
